@@ -1,2 +1,3 @@
-# Micriblog
-Build microblog by flask framework
+# Article Web
+Build Article by flask framework
+Ref information from pythonbasics.org
