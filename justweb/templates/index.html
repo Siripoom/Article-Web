@@ -1,9 +1,10 @@
 {% extends "layout.html"%}
 {% block content%}
+<div class="container">
 <div class="title">
-    <h1>Welcome to Microblog</h1>
+    <center><h1>Welcome to Microblog</h1></center>
 </div>
-
+</div>
 <div class="titlelist">
     {% for item in articletitle%}
     <ul>
@@ -14,89 +15,91 @@
     </ul>
     {%endfor%}
 </div>
-<div class="article">
-    <div class="title">
-        <a name="title">
-            <h2>What is Flask Python</h2>
-        </a>
-    </div>
-    <div class="content">
-        <p>Flask is a web framework, it’s a Python module that lets you develop web applications easily. It’s has a
-            small and easy-to-extend core: it’s a microframework that doesn’t include an ORM (Object Relational
-            Manager) or such features.
-            It does have many cool features like url routing, template engine. It is a WSGI web app framework.
-        </p>
-    </div>
-    <div class="title">
-        <h2>What is Flask framework?</h2>
-    </div>
-    <div class="content">
-        <p>it’s a Python module that lets you develop web applications easily. It’s has a small and easy-to-extend
-            core: it’s a
-            microframework that doesn’t include an ORM (Object Relational Manager) or such features.
-            It does have many cool features like url routing, template engine. It is a WSGI web app framework.
-        </p>
-    </div>
-    <div class="title">
-        <h2>What is Flask?</h2>
-    </div>
-    <div class="content">
-        <p>Flask is a web application framework written in Python. It was developed by Armin Ronacher, who led a
-            team of international Python enthusiasts called Poocco. Flask is based on the Werkzeg WSGI toolkit and
-            the Jinja2 template engine.Both are Pocco projects.
-        </p>
-    </div>
-    <div class="title">
-        <h2>WSGI</h2>
-    </div>
-    <div class="content">
-        <p>The Web Server Gateway Interface (Web Server Gateway Interface, WSGI) has been used as a standard for
-            Python web application development. WSGI is the specification of a common interface between web servers
-            and web applications.
-        </p>
-    </div>
-    <div class="title">
-        <h2>jinja2</h2>
-    </div>
-    <div class="content">
-        <p>jinja2 is a popular template engine for Python.A web template system combines a template with a specific
-            data source to render a dynamic web page.
+<div class="container">
+    <div class="article">
+        <div class="title">
+            <a name="title">
+                <h2>What is Flask Python</h2>
+            </a>
+        </div>
+        <div class="content">
+            <p>Flask is a web framework, it’s a Python module that lets you develop web applications easily. It’s has a
+                small and easy-to-extend core: it’s a microframework that doesn’t include an ORM (Object Relational
+                Manager) or such features.
+                It does have many cool features like url routing, template engine. It is a WSGI web app framework.
+            </p>
+        </div>
+        <div class="title">
+            <h2>What is Flask framework?</h2>
+        </div>
+        <div class="content">
+            <p>it’s a Python module that lets you develop web applications easily. It’s has a small and easy-to-extend
+                core: it’s a
+                microframework that doesn’t include an ORM (Object Relational Manager) or such features.
+                It does have many cool features like url routing, template engine. It is a WSGI web app framework.
+            </p>
+        </div>
+        <div class="title">
+            <h2>What is Flask?</h2>
+        </div>
+        <div class="content">
+            <p>Flask is a web application framework written in Python. It was developed by Armin Ronacher, who led a
+                team of international Python enthusiasts called Poocco. Flask is based on the Werkzeg WSGI toolkit and
+                the Jinja2 template engine.Both are Pocco projects.
+            </p>
+        </div>
+        <div class="title">
+            <h2>WSGI</h2>
+        </div>
+        <div class="content">
+            <p>The Web Server Gateway Interface (Web Server Gateway Interface, WSGI) has been used as a standard for
+                Python web application development. WSGI is the specification of a common interface between web servers
+                and web applications.
+            </p>
+        </div>
+        <div class="title">
+            <h2>jinja2</h2>
+        </div>
+        <div class="content">
+            <p>jinja2 is a popular template engine for Python.A web template system combines a template with a specific
+                data source to render a dynamic web page.
 
-            This allows you to pass Python variables into HTML templates like this:
-        </p>
-    </div>
-    <div class="title">
-        <h2>Werkzeug</h2>
-    </div>
-    <div class="content">
-        <p>Werkzeug is a WSGI toolkit that implements requests, response objects, and utility functions. This
-            enables a web frame to be built on it. The Flask framework uses Werkzeg as one of its bases.
-        </p>
-    </div>
-    <div class="title">
-        <h2>Microframework</h2>
-    </div>
-    <div class="content">
-        <p>
-            Flask is often referred to as a microframework. It is designed to keep the core of the application
-            simple and scalable.
+                This allows you to pass Python variables into HTML templates like this:
+            </p>
+        </div>
+        <div class="title">
+            <h2>Werkzeug</h2>
+        </div>
+        <div class="content">
+            <p>Werkzeug is a WSGI toolkit that implements requests, response objects, and utility functions. This
+                enables a web frame to be built on it. The Flask framework uses Werkzeg as one of its bases.
+            </p>
+        </div>
+        <div class="title">
+            <h2>Microframework</h2>
+        </div>
+        <div class="content">
+            <p>
+                Flask is often referred to as a microframework. It is designed to keep the core of the application
+                simple and scalable.
 
-            Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities
-            to the application.
-        </p>
-    </div>
-    <div class="title">
-        <h2>Why is Flask a good web framework choice?</h2>
-    </div>
-    <div class="content">
-        <p>Unlike the Django framework, Flask is very Pythonic. It’s easy to get started with Flask, because it
-            doesn’t have a huge learning curve.
+                Instead of an abstraction layer for database support, Flask supports extensions to add such capabilities
+                to the application.
+            </p>
+        </div>
+        <div class="title">
+            <h2>Why is Flask a good web framework choice?</h2>
+        </div>
+        <div class="content">
+            <p>Unlike the Django framework, Flask is very Pythonic. It’s easy to get started with Flask, because it
+                doesn’t have a huge learning curve.
 
-            On top of that it’s very explicit, which increases readability. To create the “Hello World” app, you
-            only need a few lines of code.
+                On top of that it’s very explicit, which increases readability. To create the “Hello World” app, you
+                only need a few lines of code.
 
-            This is a boilerplate code example.
-        </p>
+                This is a boilerplate code example.
+            </p>
+        </div>
     </div>
 </div>
 {% endblock %}

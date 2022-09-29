@@ -5,11 +5,28 @@
     <form method="post">
         {{form.hidden_tag()}}
         {{form.name.label}}
-        {{form.name()}} {{form.submit()}}
+        {{form.name()}} 
+        <!-- Radio Field -->
+        <br>
+        {{form.gender.label}} {{form.gender()}}
+        <!-- Select field -->
+        {{form.career.label}} {{form.career}}
+        <br>
+        {{form.message.label}} <br>{{form.message}}
+        <!-- Boolean Field -->
+        <br>
+        {{form.isAccept()}} {{form.isAccept.label}} 
+        <br>
+        {{form.submit()}}
     </form>
     <hr>
-    {%if name%}
-        Your name is {{name}}
+    {%if session['name']%}
+        Your name is <strong>{{session['name']}}</strong><br>
+        Accept condition <strong>{{session['isAccept']}}</strong><br>
+        Sex <strong>{{session['gender']}}</strong><br>
+        career <strong>{{session['career']}}</strong><br>
+        message <strong>{{session['message']}}</strong>
+        
     {% else %}
         Not data
     {% endif %}

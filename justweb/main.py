@@ -1,19 +1,19 @@
 
-
-from msilib.schema import MsiAssemblyName
-from unicodedata import name
-from flask import Flask, render_template , request
+from flask import Flask, render_template , request,session
 from flask_wtf import FlaskForm
-from wtforms import TelField, SubmitField
+from wtforms import TelField, SubmitField, BooleanField,RadioField,SelectField,TextAreaField
+from wtforms.validators import DataRequired
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mykey'
 
-
 class Myform(FlaskForm):
-    name = TelField("Enter your name.")
+    name = TelField("Enter your name.",validators=[DataRequired()])
+    isAccept = BooleanField("Accept condition")
     submit = SubmitField("Submit")
-
-
+    career = SelectField('career',choices=[('Programer','Programer'),('Developer','Dev'),('Game Dev','Game Dev')])
+    gender = RadioField('sex',choices=[('Male','Male'),('Female','Female'),('Other','Other')])
+    message = TextAreaField("Enter your message")
 @app.route("/")
 def index():
     articletitle = ["What is Flask Python","What is a Web Framework?",
@@ -40,12 +40,20 @@ def contact():
 
 @app.route("/form",methods=['GET','POST'])
 def forms():
-    name = False
     form = Myform()
     if form.validate_on_submit():
-        name = form.name.data
+        session['name'] = form.name.data
+        session['isAccept'] = form.isAccept.data
+        session['gender'] = form.gender.data
+        session['career']  = form.career.data
+        session['message'] = form.message.data
+        #clear data
+        form.message.data = ""
         form.name.data = ""
-    return render_template("Form_wtf.html",form=form,name=name)
+        form.isAccept.data = ""
+        form.gender.data = ""
+        form.career.data = ""
+    return render_template("Form_wtf.html",form=form,)
 
 
 if __name__ == "__main__":
