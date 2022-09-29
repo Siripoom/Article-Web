@@ -1,23 +1,32 @@
 {% extends "layout.html"%}
+
 {% block content%}
 
 <div class="container my-2">
     <form method="post">
         {{form.hidden_tag()}}
         {{form.name.label}}
-        {{form.name()}} 
+        {{form.name(class="form-control")}}
+
         <!-- Radio Field -->
         <br>
         {{form.gender.label}} {{form.gender()}}
         <!-- Select field -->
-        {{form.career.label}} {{form.career}}
+        {{form.career.label}} {{form.career(class="form-control")}}
         <br>
-        {{form.message.label}} <br>{{form.message}}
+        {{form.message.label}} <br>{{form.message(class="form-control")}}
         <!-- Boolean Field -->
         <br>
         {{form.isAccept()}} {{form.isAccept.label}} 
         <br>
-        {{form.submit()}}
+        {{form.submit(class="btn btn-success")}}
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-success" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endfor %}
     </form>
     <hr>
     {%if session['name']%}
